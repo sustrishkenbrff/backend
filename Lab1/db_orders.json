@@ -1,0 +1,67 @@
+[
+  {
+    "from": "address - 1",
+    "to": "address - 2",
+    "login": "login-2"
+  },
+  {
+    "from": "address-1",
+    "to": "address-3",
+    "login": "l2"
+  },
+  {
+    "from": "address-1",
+    "to": "address-3",
+    "login": "l2"
+  },
+  {
+    "from": "address-1",
+    "to": "address-3",
+    "login": "l2"
+  },
+  {
+    "from": "address-1",
+    "to": "address-3",
+    "login": "l2"
+  },
+  {
+    "from": "address-1",
+    "to": "address-3",
+    "login": "l2"
+  },
+  {
+    "from": "address-1",
+    "to": "address-3",
+    "login": "l2"
+  },
+  {
+    "from": "address-1",
+    "to": "address-3",
+    "login": "l2"
+  },
+  {
+    "from": "address-2",
+    "to": "address-3",
+    "login": "l2"
+  },
+  {
+    "from": "address-3",
+    "to": "address-3",
+    "login": "l2"
+  },
+  {
+    "from": "address-4",
+    "to": "address-3",
+    "login": "l2"
+  },
+  {
+    "from": "address-5",
+    "to": "address-3",
+    "login": "l2"
+  },
+  {
+    "from": "address-6",
+    "to": "address-3",
+    "login": "l2"
+  }
+]
