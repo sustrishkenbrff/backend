@@ -1,13 +1,32 @@
 {
 	"info": {
-		"_postman_id": "f3d28207-8e8f-4091-b710-312e0b1d4b39",
+		"_postman_id": "a0584f2f-4479-4445-a5d1-4954e5ed2eff",
 		"name": "Pract-1___",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "4087731"
+		"_exporter_id": "32985308"
 	},
 	"item": [
 		{
 			"name": "Get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "last-5",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -135,6 +154,86 @@
 					"port": "8080",
 					"path": [
 						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "last 3 (to)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "0ef5e09f-d554-4aef-9ff9-9da4d034644f",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/address/to/last-3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address",
+						"to",
+						"last-3"
+					]
+				},
+				"description": "last-3 to"
+			},
+			"response": []
+		},
+		{
+			"name": "lowest",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "0ef5e09f-d554-4aef-9ff9-9da4d034644f",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/orders/lowest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"lowest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "biggest",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "0ef5e09f-d554-4aef-9ff9-9da4d034644f",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/orders/biggest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"biggest"
 					]
 				}
 			},

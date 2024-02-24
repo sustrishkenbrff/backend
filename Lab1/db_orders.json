@@ -1,67 +1,38 @@
 [
   {
-    "from": "address - 1",
-    "to": "address - 2",
-    "login": "login-2"
+    "from": "address-123",
+    "to": "address-223",
+    "login": "login-1",
+    "price": 1
   },
   {
-    "from": "address-1",
-    "to": "address-3",
-    "login": "l2"
+    "from": "address-123",
+    "to": "address-223",
+    "login": "login-2",
+    "price": 25
   },
   {
-    "from": "address-1",
-    "to": "address-3",
-    "login": "l2"
+    "from": "address-123",
+    "to": "address-223",
+    "login": "login-2",
+    "price": 48
   },
   {
-    "from": "address-1",
-    "to": "address-3",
-    "login": "l2"
+    "from": "address-123",
+    "to": "address-223",
+    "login": "login-2",
+    "price": 59
   },
   {
-    "from": "address-1",
-    "to": "address-3",
-    "login": "l2"
+    "from": "address-123",
+    "to": "address-223",
+    "login": "login-2",
+    "price": 36
   },
   {
-    "from": "address-1",
-    "to": "address-3",
-    "login": "l2"
-  },
-  {
-    "from": "address-1",
-    "to": "address-3",
-    "login": "l2"
-  },
-  {
-    "from": "address-1",
-    "to": "address-3",
-    "login": "l2"
-  },
-  {
-    "from": "address-2",
-    "to": "address-3",
-    "login": "l2"
-  },
-  {
-    "from": "address-3",
-    "to": "address-3",
-    "login": "l2"
-  },
-  {
-    "from": "address-4",
-    "to": "address-3",
-    "login": "l2"
-  },
-  {
-    "from": "address-5",
-    "to": "address-3",
-    "login": "l2"
-  },
-  {
-    "from": "address-6",
-    "to": "address-3",
-    "login": "l2"
+    "from": "address-123",
+    "to": "address-223",
+    "login": "login-2",
+    "price": 56
   }
 ]

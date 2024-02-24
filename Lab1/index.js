@@ -30,7 +30,7 @@ app.get('/address/from/last-5', authorizationMiddleware, (req, res) => {
   const { user } = req;
 
   if (!user) {
-    return res.status(400).send({ message: `Користувача не знайдено за токеном: ${req.headers.authorization}` });
+    return res.status(400).send({ message: `User was not found by token: ${req.headers.authorization}` });
   }
 
   const userOrders = ORDERS.filter(el => el.login === user.login);
@@ -41,6 +41,82 @@ app.get('/address/from/last-5', authorizationMiddleware, (req, res) => {
 
   res.status(200).send(uniqueFromAddresses.reverse());
 });
+app.get('/address/to/last-3', authorizationMiddleware, (req, res) => {
+  const { user } = req;
+
+  if (!user) {
+    return res.status(400).send({ message: `User was not found by token: ${req.headers.authorization}` });
+  }
+
+  const userOrders = ORDERS.filter(el => el.login === user.login);
+
+  const uniqueToAddresses = Array.from(
+    new Set(userOrders.slice(-3).map(order => order.to))
+  );
+
+  const last3UniqueToAddresses = [...new Set(uniqueToAddresses)].slice(-3).reverse();
+
+  res.status(200).send(last3UniqueToAddresses);
+});
+
+app.get('/orders/lowest', authorizationMiddleware, (req, res) => {
+  const { user } = req;
+
+  if (!user) {
+    return res.status(400).send({ message: `User was not found by token: ${req.headers.authorization}` });
+  }
+
+  const userOrders = ORDERS.filter(el => el.login === user.login);
+  if (userOrders.length === 0 ) {
+    return res.status(404).send({message: 'User do not have orders yet'})
+  }
+
+  const lowest = Math.min(...userOrders.map( order => order.price));
+
+  const LowestOrder = userOrders.find(order => order.price === lowest);
+
+
+  const lowestresponse = {
+    order: {
+      from: LowestOrder.from,
+      to: LowestOrder.to,
+      price: LowestOrder.price,
+      login: LowestOrder.login
+    }
+  }
+
+  res.status(200).send(lowestresponse);
+});
+
+app.get('/orders/biggest', authorizationMiddleware, (req, res) => {
+  const { user } = req;
+
+  if (!user) {
+    return res.status(400).send({ message: `User was not found by token: ${req.headers.authorization}` });
+  }
+
+  const userOrders = ORDERS.filter(el => el.login === user.login);
+  if (userOrders.length === 0 ) {
+    return res.status(404).send({message: 'User do not have orders yet'})
+  }
+
+  const biggest = Math.max(...userOrders.map( order => order.price));
+
+  const BiggestOrder = userOrders.find(order => order.price === biggest);
+
+
+  const Biggestresponse = {
+    order: {
+      from: BiggestOrder.from,
+      to: BiggestOrder.to,
+      price: BiggestOrder.price,
+      login: BiggestOrder.login
+    }
+  }
+
+  res.status(200).send(Biggestresponse);
+});
+
 
 app.get('/users', (req, res) => {
  const users = USERS.map(user => {
@@ -78,7 +154,8 @@ app.post('/orders', authorizationMiddleware, (req, res) => {
 
  const order = {
   ...body,
-  login: user.login
+  login: user.login,
+  price: Math.floor(Math.random() * (81)) + 20
  };
 
  ORDERS.push(order);
